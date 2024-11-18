@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlled Motives</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: amsterfont;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            margin: 60;
+            border: none;
+        }
+        .login-container {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+            font-family: amsterfont;
+        }
+        .login-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: amsterfont;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .login-container button {
+            background-color: #561c24;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+        }
+        .login-container button:hover {
+            background-color: #561c24;
+        }
+        .login-container .divider {
+            margin: 20px 0;
+            border-top: 1px solid #dbdbdb;
+            position: relative;
+        }
+        @font-face{
+            font-family: amsterfont;
+            src: url(amsterfont.ttf);
+        }
+        .login-container .divider span {
+            background-color: white;
+            padding: 0 10px;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .login-container .signup {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .login-container .signup a {
+            color: #561c24;
+            text-decoration: none;
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="login-container">
+        <h1 style="font-family: amsterfont;" onclick="generateAlert">Controlled Motives</h1>
+        <form onsubmit="return validateForm()">
+            <input id="username" name="username" type="text" placeholder="Username" required>
+            <span class="error" id="usernameError"></span>
+            <input id="password" name="password" type="password" placeholder="Password" required>
+            <span class="error" id="passwordError"></span>
+            <br>
+            <input type="text"><select id="fruit-select" name="fruits">
+                <option value="" disabled selected>Select what you love</option>
+                <option value="apple">Cinematography</option>
+                <option value="banana">Drawing Art</option>
+                <option value="banana">Art Gallery</option>
+                <option value="cherry">Fashion Designing</option>
+                <option value="grape">Fashion Model</option>
+                <option value="orange">Short Films</option>
+            </select>
+            <br>
+            <br>
+            <button id="submit">Log In</button>
+        </form>
+        <div class="divider">
+            <span>OR</span>
+        </div>
+        <div class="signup">
+            <p>Don't have an account? <a href="#" onclick="">Sign up</a></p>
+        </div>
+    </div>
+    <script>
+        function generateAlert(){
+            alert("You have successfully logged in Controlled Motives")
+
+        }
+    // Predefined username and password
+    const predefinedUsername = "admin"; // Set your desired username
+    const predefinedPassword = "password123"; // Set your desired password
+
+    function validateForm() {
+        // Clear previous error messages
+        document.getElementById("usernameError").textContent = "";
+        document.getElementById("passwordError").textContent = "";
+
+        // Get form values
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+        let isValid = true;
+
+        // Validate username
+        if (username === "") {
+            document.getElementById("usernameError").textContent = "Username is required.";
+            isValid = false;
+        } else if (username !== predefinedUsername) {
+            document.getElementById("usernameError").textContent = "Invalid username.";
+            isValid = false;
+        }
+
+        // Validate password
+        if (password === "") {
+            document.getElementById("passwordError").textContent = "Password is required.";
+            isValid = false;
+        } else if (password !== predefinedPassword) {
+            document.getElementById("passwordError").textContent = "Invalid password.";
+            isValid = false;
+        }
+
+        // If the form is valid, redirect to the next HTML file
+        if (isValid) {
+            // Redirect to another HTML file (e.g., dashboard.html)
+            window.location.href = "controlled_motives.html"; // Change this to your target file
+        }
+
+        return false; // Prevent form submission
+    }
+
+    </script>
+</body>
+</html>
