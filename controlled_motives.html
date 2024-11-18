@@ -1,0 +1,307 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContolledMotives.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200..900&display=swap">
+</head>
+<body>
+    <section class="about"  >
+        </div>
+    </section>
+
+    <section class="number1">
+        <h1 style="text-align: center; font-family: amsterfont; font-size: 40px;">Controlled Motives</h1>
+        <p style="text-align: center; font-family: amsterfont; font-size: 20px;">Unleashing the Power of Artistic Expression</p>    
+    </section>
+
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="#gallery">Art Gallery</a></li>
+                <li><a href="#moments">Aesthetic Moments</a></li>
+                <li><a href="#paintings">Paintings</a></li>
+                <!--<li><a href="#abstractart">Abstract Art</a></li>-->
+                <li><a href="#fashiondesigning">Fashion Designing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+       
+        <section id="gallery">
+            <h1>Art Gallery</h1>
+            <div class="gallery-container">
+                <div class="art-piece">
+                    <img src="The Art Images/library-trolla.png" alt="Art Piece 1">
+                    <div class="like-section">
+                        <button id="like-button" class="like-button">🌹</button>
+                        <span id="like-count" class="like-count">0 flwrs</span>
+                    </div>
+                    <h2>Knowledge</h2>
+                    <p>This piece represents the consistent pursue for knowledge through the ages</p>
+                </div>
+                <div class="art-piece">
+                    <img src="The Art Images/african heritage art.PNG" alt="Art Piece 1">
+                    <div class="like-section">
+                        <button id="like-button" class="like-button">🌹</button>
+                        <span id="like-count" class="like-count">0 flwrs</span>
+                    </div>
+                    <h2>African Evolution</h2>
+                    <p>This piece represents the love for the black community respecting there elders</p>
+                </div>
+                <!--
+                <div class="comment-section">
+                    <div class="comments">
+                        <div class="comment">
+                            <img src="user-avatar.jpg" alt="User  Avatar" class="avatar">
+                            <div class="comment-text">
+                                <strong>Username</strong>: This is a sample comment!
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <img src="user-avatar2.jpg" alt="User  Avatar" class="avatar">
+                            <div class="comment-text">
+                                <strong>AnotherUser </strong>: Great post!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-input">
+                        <input type="text" placeholder="Add a comment..." />
+                        <button type="submit">Post</button>
+                    </div>
+                </div>
+                -->
+            <div class="art-piece">
+                <img src="The Art Images\ojango-library.png" alt="Art Piece 1">
+                <div class="like-section">
+                    <button id="like-button" class="like-button">🌹</button>
+                    <span id="like-count" class="like-count">0 likes</span>
+                </div>
+                <h2>Unclearer Vision</h2>
+                <p>Even though the vision of where actually want to be is not clear, we are still ready to fight for it </p>
+
+            </div>
+
+
+                       
+            <div class="gallery-container">
+                <div class="art-piece">
+                    <img src="The Art Images/consistent_knowledge.JPG" alt="Art Reflection">
+                    <div class="like-section">
+                        <button id="like-button" class="like-button">🌹</button>
+                        <span id="like-count" class="like-count">0 likes</span>
+                    </div>
+                    <h2>"Love"</h2>
+                    <p>Love is not about what you can get, but about what you can give.</p>
+                </div>
+                <div class="art-piece">
+                    <img src="The Art Images/geez-behind-shelf.png" alt="Papa Valentino">
+                    <div class="like-section">
+                        <button id="like-button" class="like-button">🌹</button>
+                        <span id="like-count" class="like-count">0 likes</span>
+                    </div>
+                    <h2>Knowledge</h2>
+                    <p>The beauty of a controlled chaos is often found in the unsaid.</p>
+                </div>
+                <div class="art-piece">
+                    <img src="The Art Images/papa valentino.PNG" alt="Floating Knowledge">
+                    <div class="like-section">
+                        <button id="like-button" class="like-button">🌹</button>
+                        <span id="like-count" class="like-count">0 likes</span>
+                    </div>
+                    <h2>"Love"</h2>
+                    <p>Love is not about what you can get, but about what you can give.</p>
+                </div>
+        <section id="moments">
+            <h1>Aesthetic moments</h1>
+                <div class="gallery-container">
+                        <div class="moments">
+                            <figure>
+                        <video 
+                            id="moments"
+                            src="The Art Images/03697423e97c4594a13b17bca62e4f86.mov" 
+                            controls 
+                            autoplay 
+                            loop 
+                            muted 
+                            poster="path/to/your/poster-image.jpg">
+                            <track 
+                                kind="captions" 
+                                src="path/to/captions.vtt" 
+                                srclang="en" 
+                                label="English">
+                            Your browser does not support the video tag.
+                        </video>
+                        
+                        <script>
+                            const videoElement = document.getElementById('artVideo');
+                            const pipButtonElement = document.getElementById('pipButton');
+                    
+                            // Check if Picture-in-Picture is supported
+                            if ('pictureInPictureEnabled' in document) {
+                                pipButtonElement.addEventListener('click', async () => {
+                                    try {
+                                        if (document.pictureInPictureElement) {
+                                            // If already in Picture-in-Picture, exit
+                                            await document.exitPictureInPicture();
+                                        } else {
+                                            // Otherwise, enter Picture-in-Picture
+                                            await videoElement.requestPictureInPicture();
+                                        }
+                                    } catch (error) {
+                                        console.error('Error with Picture-in-Picture:', error);
+                                    }
+                                });
+                            } else {
+                                console.warn('Picture-in-Picture is not supported by your browser.');
+                                pipButtonElement.disabled = true; // Disable button if not supported
+                            }
+                        </script>
+                           
+                                                                  
+                                <!--video footer CM-->
+                                
+                            </figure>
+                        </div>
+                        <div class="moments">
+                            <figure>
+                                <video 
+                                  src="The Art Images/c4e5378b737d4d36b6757edd2fb0ea28.mp4" 
+                                    alt="Art Piece 1" 
+                                    controls 
+                                    autoplay 
+                                    loop 
+                                    muted 
+                                    poster="path/to/your/poster-image.jpg">
+
+                                </video>
+
+                               
+                            </figure>
+            
+                        </div>
+                        <div class="moments">
+                            <figure>
+                                <video 
+                                    src="The Art Images/foo-vlog.mov" 
+                                    alt="Art Piece 1" 
+                                    controls 
+                                    autoplay 
+                                    loop 
+                                    muted 
+                                    poster="path/to/your/poster-image">
+                                    Your browser does not support the video tag.
+                                </video>
+
+    
+                            </figure>
+                            
+                        </div>
+                        <div class="gallery-container">
+                            <div class="moments">
+                                <video src="The Art Images/BLANK.JPG" alt="Art Piece 1">
+                                <h2>African Evolution</h2>
+                                <p>This piece represents the love for the black community respecting there elders</p>
+                            </div>
+                            <div class="moments">
+                                <video src="The Art Images/BLANK.JPG" alt="Art Piece 2">
+                                <h2>"Love"</h2>
+                                <p>Love is not about what you can get, but about what you can give.</p>
+                            </div>
+                            <div class="moments">
+                                <video src="The Art Images/BLANK.JPG" alt="Art Piece 3">
+                                <h2>Generation Knowledge</h2>
+                                <p>The stories of older generations aren't just entertaining; they're also a way of passing on wisdom and cultural values.</p>
+                            </div>
+
+                
+                
+                
+    <section id="paintings">
+        <h1>Paintings</h1>
+            <div class="gallery-container">
+                <div class="art-piece">
+                    <img src="The Art Images/vision.png" alt="Art Piece 1">
+                    <h2>Perspectives</h2>
+                    <p>A representation of a powerful being, or as a symbol of the many perspectives and facets of reality</p>
+                </div>
+                <div class="art-piece">
+                    <img src="The Art Images/BLANK.JPG" alt="Art Piece 2">
+                    <h2>Drawing 2</h2>
+                    <p>Caption 2</p>
+                </div>
+                <div class="art-piece">
+                    <img src="The Art Images/BLANK.JPG" alt="Art Piece 3">
+                    <h2>Drawing 3</h2>
+                    <p>Caption 3</p>
+                </div>
+                <div class="gallery-container">
+                    <div class="art-piece">
+                        <img src="The Art Images/BLANK.JPG" alt="Art Piece 1">
+                        <h2>African Evolution</h2>
+                        <p>This piece represents the love for the black community respecting there elders</p>
+                    </div>
+                    <div class="art-piece">
+                        <img src="The Art Images/BLANK.JPG" alt="Art Piece 2">
+                        <h2>"Love"</h2>
+                        <p>Love is not about what you can get, but about what you can give.</p>
+                    </div>
+                    <div class="art-piece">
+                        <img src="The Art Images/BLANK.JPG" alt="Art Piece 3">
+                        <h2>Generation Knowledge</h2>
+                        <p>The stories of older generations aren't just entertaining; they're also a way of passing on wisdom and cultural values.</p>
+                    </div>
+
+
+                    <section id="fashiondesigning">
+                        <h1>Fashion Designing</h1>
+                        <div class="gallery-container">
+                            <div class="art-piece">
+                                <img src="C:\Users\hp\OneDrive\Desktop\college_jacket.png" alt="Art Piece 1">
+                                <h2>African Evolution</h2>
+                                <p>This piece represents the love for the black community respecting there elders</p>
+                            </div>
+                            <div class="art-piece">
+                                <img src="The Art Images/papa valentino.PNG" alt="Art Piece 2">
+                                <h2>"Love"</h2>
+                                <p>Love is not about what you can get, but about what you can give.</p>
+                            </div>
+                            <div class="art-piece">
+                                <img src="The Art Images/Generation art.PNG" alt="Art Piece 3">
+                                <h2>Generation Knowledge</h2>
+                                <p>The stories of older generations aren't just entertaining; they're also a way of passing on wisdom and cultural values.</p>
+                            </div>
+                            <div class="gallery-container">
+                                <div class="art-piece">
+                                    <img src="The Art Images/african heritage art.PNG" alt="Art Piece 1">
+                                    <h2>African Evolution</h2>
+                                    <p>This piece represents the love for the black community respecting there elders</p>
+                                </div>
+                                <div class="art-piece">
+                                    <img src="The Art Images/papa valentino.PNG" alt="Art Piece 2">
+                                    <h2>"Love"</h2>
+                                    <p>Love is not about what you can get, but about what you can give.</p>
+                                </div>
+                                <div class="art-piece">
+                                    <img src="" alt="Art Piece 3">
+                                    <h2>Generation Knowledge</h2>
+                                    <p>The stories of older generations aren't just entertaining; they're also a way of passing on wisdom and cultural values.</p>
+                                </div>
+                        <script src="controlled motives.js"></script>
+                
+        
+ <!--<img src="The Art Images/CM official label.png" alt="Logo" class="logo">
+        <div class="search-container">
+                <input style="align-content: center;" text placeholder="Search..." class="search-input" type="text">
+                <button class="search-button">Search</button>-->
+        
+       
+    </main>
+    <footer>
+        <p>&copy; 2024 Controlled Motives</p>
+    </footer>
+</body>
+</html>
